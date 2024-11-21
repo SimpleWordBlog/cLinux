@@ -1,2 +1,2 @@
-> + 注意makefilke文件[-g]
-> + 注意.vscode的task.json文件【.c和header文件路径】
+> + 注意`makefilke`文件[-g]
+> + 注意`.vscode`的`task.json`文件【`.c`和`header`文件路径】
