@@ -4,7 +4,8 @@ CC := gcc
 # 编译选项，添加调试信息
 CFLAGS := -g
 
-# 路径设置(固定值，推荐设为立即变量)
+# 路径设置(固定值，推荐设为立即变量
+# 这里是相对于项目根目录的路径【不是相对于makefile】
 MAIN_DIR := .
 SRC_DIR := ./src
 HEADER_DIR := ./header
@@ -13,6 +14,7 @@ HEADER_DIR := ./header
 TARGET := main
 
 # 自动生成源文件(所有.c)
+# shell查找的路径是相当于makefile所在的路径
 SRC := $(MAIN_DIR)/main.c $(shell find $(SRC_DIR) -name "*.c")
 
 # 使用模板替换生成目标文件(所有.o)
