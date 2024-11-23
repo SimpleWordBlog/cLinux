@@ -1,12 +1,11 @@
 # 编译器
 CC := gcc
 
-# 路径设置(固定值，推荐设为立即变量
+# 路径设置(固定值，推荐设为立即变量)
 # 这里是相对于项目根目录的路径【不是相对于makefile】
 MAIN_DIR := .
 SRC_DIR := ./src
 HEADER_DIR := ./header
-LOG_DIR := ./lib/log
 LOG_DIR := ./lib/log
 
 # 编译选项，添加调试信息和用到的头文件目录
@@ -37,7 +36,7 @@ $(LOG_OBJ):
 	make -C $(LOG_DIR)
 
 # 编译规则，生成 .o 文件并指定头文件目录,.O结尾的文件匹配此规则
-# logo.o已经生成，不会匹配此规则
+# log.o已经生成，不会匹配此规则
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
